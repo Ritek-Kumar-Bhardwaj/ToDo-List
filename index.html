@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Enter new task..." />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <div class="filters" id="filters">
+        <button id="all" onclick="getActivePage('all')">All</button>
+        <button id="pending" onclick="getActivePage('pending')">Pending</button>
+        <button id="completed" onclick="getActivePage('completed')">
+          Completed
+        </button>
+      </div>
+      <ul id="taskList"></ul>
+      <div id="pagination-controls"></div>
+      <button class="deleteAll" id="deleteAll" onclick="deleteAllTasks()">
+        Delete All Tasks
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
